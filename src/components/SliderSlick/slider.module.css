@@ -1,0 +1,15 @@
+.container {
+    margin-bottom: 50px;
+}
+
+
+.contentSlideContainer {
+    width: 35%;
+    padding-top: 5%;
+    padding-left: 5%
+}
+
+.contentSlideContainer h1 {
+    font-size: 38px;
+    margin-bottom: 25px;
+}
