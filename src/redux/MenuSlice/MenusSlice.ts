@@ -6,8 +6,16 @@ const initialState = {
     menu: {
         link: [
             {
-                name: '',
-                url: '',
+                name: 'Домой',
+                url: '/',
+            },
+            {
+                name: 'Магазин',
+                url: '/store',
+            },
+            {
+                name: 'Новости',
+                url: '/news',
             },
         ],
         logo: 'logo image',

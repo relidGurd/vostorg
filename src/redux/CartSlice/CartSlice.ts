@@ -12,7 +12,7 @@ interface IProduct {
 }
 
 const initialState = {
-    products: <IProduct>[],
+    products: [],
     loading: false
 }
 
@@ -21,7 +21,7 @@ export const cartSlice = createSlice({
     // `createSlice` will infer the state type from the `initialState` argument
     initialState,
     reducers: {
-        pushProductInCart: (state: Draft<any>, action: PayloadAction<IProduct>) => {
+        pushProductInCart: (state: Draft<any>, action: PayloadAction<any>) => {
             const isDuplicate = state.products.some((item: any) => item.id === action.payload.id);
             if (!isDuplicate) {
                 state.products.push(action.payload)

@@ -8,13 +8,13 @@ import {useEffect} from "react";
 import {useSelector} from "react-redux";
 
 const Cart = ()=> {
-    const {products} = useSelector(state => state.cart)
+    const {products} = useSelector((state: any) => state.cart)
 
 
     return (
         <div>
             {
-                products.map(prod => <div key={prod.id}>
+                products.map((prod: any) => <div key={prod.id}>
                     {prod.title}
                 </div>)
             }

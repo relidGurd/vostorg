@@ -1,17 +1,12 @@
 
 export const getDataServices = {
-    async getAll () {
-        const res = await fetch('https://swapi.dev/api/people/1')
-        return res.json()
-    },
-
     async getAllFakeProducts () {
-        const res = await fetch('https://fakestoreapi.com/products')
+        const res = await fetch('https://art-vostorg-store-test.up.railway.app/api/products/', {next: {revalidate: 60}})
         return res.json()
     },
 
-    async getSingleFakeProduct (id) {
-        const res = await fetch(`https://fakestoreapi.com/products/${id}`)
+    async getSingleFakeProduct (id: any) {
+        const res = await fetch(`https://art-vostorg-store-test.up.railway.app/api/products/${id}/`)
         return res.json()
     }
 

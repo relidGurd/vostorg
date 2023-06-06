@@ -9,7 +9,7 @@ import {useSelector} from "react-redux";
 
 const SliderSlick:FC = () => {
 
-    const {slider} = useSelector(sl => sl.slider)
+    const {slider} = useSelector((sl: any) => sl.slider)
     const settings = {
         dots: true,
         infinite: true,

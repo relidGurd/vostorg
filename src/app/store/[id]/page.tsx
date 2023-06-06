@@ -1,30 +1,29 @@
 import {getDataServices} from "@/services/getDataServices";
-import Store from "@/components/Store/Store";
 import {Metadata, ResolvingMetadata} from "next";
 import SingleProduct from "@/components/SingleProduct/SindleProduct";
 
+//
+// type Props = {
+//     params: { id: string };
+//     searchParams: { [key: string]: string | string[] | undefined };
+// };
+//
+// export async function generateMetadata(
+//     { params, searchParams }: Props,
+//     parent?: ResolvingMetadata,
+// ): Promise<Metadata> {
+//     // read route params
+//     const id = params.id;
+//     // fetch data
+//     const product = await getDataServices.getSingleFakeProduct(id)
+//
+//     return {
+//         title: product.title,
+//     };
+// }
 
-type Props = {
-    params: { id: string };
-    searchParams: { [key: string]: string | string[] | undefined };
-};
-
-export async function generateMetadata(
-    { params, searchParams }: Props,
-    parent?: ResolvingMetadata,
-): Promise<Metadata> {
-    // read route params
-    const id = params.id;
-    // fetch data
-    const product = await getDataServices.getSingleFakeProduct(id)
-
-    return {
-        title: product.title,
-    };
-}
-
-export default async function SingleProductPage({ params }) {
-    const data = await getDataServices.getSingleFakeProduct(params.id)
+export default async function SingleProductPage({ params }: any) {
+    const data: any = await getDataServices.getSingleFakeProduct(params.id)
     return (
         <main>
             <SingleProduct product={data} />
