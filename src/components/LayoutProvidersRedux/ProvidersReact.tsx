@@ -1,9 +1,9 @@
 'use client'
 import {Provider} from "react-redux";
 import {store} from "@/redux/store";
-import {FC, useEffect, useState} from "react";
+import {FC, useEffect} from "react";
 import MenuComponent from "@/components/Menu/MenuComponent";
-import axios from "axios";
+import Footer from "@/components/Footer/Footer";
 
 const ProvidersReact: FC<{children: any}> = ({children}) => {
 
@@ -24,7 +24,8 @@ const ProvidersReact: FC<{children: any}> = ({children}) => {
     return (
         <Provider store={store}>
             <MenuComponent/>
-            {children}
+                {children}
+            <Footer />
         </Provider>
     )
 }

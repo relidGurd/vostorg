@@ -8,6 +8,11 @@ export const getDataServices = {
     async getSingleFakeProduct (id: any) {
         const res = await fetch(`https://art-vostorg-store-test.up.railway.app/api/products/${id}/`)
         return res.json()
+    },
+
+    async getTestProducts () {
+        const res = await fetch(`https://fakestoreapi.com/products?limit=10`)
+        return res.json()
     }
 
 }

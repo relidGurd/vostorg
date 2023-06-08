@@ -17,21 +17,24 @@ const initialState: State = {
     slider: [
         {
             id: 1,
-            title: '',
-            description: '',
-            img: 'http://localhost:3000/slide1.jpg'
+            title: '/HAPPINESS IS…/ Solo exhibition WHATOONEE!',
+            description: '25.05-04.06 будет проходить персональная выставка WHATOONEE в галерее DEBOSH',
+            img: 'http://localhost:3000/slide3.jpg',
+            color: 'white'
         },
         {
             id: 2,
-            title: '25',
-            description: '',
-            img: 'http://localhost:3000/slide3.webp'
+            title: 'ТВОРЧЕСКИЙ ПЕРЕПОЛОХ',
+            description: 'Совместно с Молодёжным парламентом Хорошевского района мы проводим фестиваль «Творческий переполох» в честь Дня Защиты детей.',
+            img: 'http://localhost:3000/slide2.jpg',
+            color: 'white'
         },
         {
             id: 3,
-            title: '25',
-            description: '',
-            img: 'http://localhost:3000/slide2.webp'
+            title: '29 мая в FINEART GALLERY открывается выставочный проект «Отпечатки души».',
+            description: 'Коллекция работ открывет серию выставок, которая демонстрирует результаты применения инновационных методов реабилитации, развите доступной инклюзивной среды для детей с ограниченными возможностями здоровья и нейроотличиями.',
+            img: 'http://localhost:3000/slide1.jpg',
+            color: 'white'
         },
     ],
     loading: false

@@ -17,6 +17,18 @@ const initialState = {
                 name: 'Новости',
                 url: '/news',
             },
+            {
+                name: 'Коллекции',
+                url: '/collection',
+            },
+            {
+                name: 'Галерея',
+                url: '/gallery',
+            },
+            {
+                name: 'Художники',
+                url: '/makers',
+            },
         ],
         logo: 'logo image',
         search: [],
@@ -26,7 +38,7 @@ const initialState = {
         },
         contacts: {
           phone: '+79260789332',
-          telegram: 'ссылка на телегу',
+          telegram: 'https://t.me/artVOSTORG',
           whatsUp: 'сслыка на вотсап',
         }
     },

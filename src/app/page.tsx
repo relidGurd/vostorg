@@ -1,9 +1,5 @@
-import Image from 'next/image'
-import SliderSlick from "@/components/SliderSlick/SliderSlick";
-import Search from "@/components/SearchComponent/Search";
-import { getDataServices} from "@/services/getDataServices";
 import {Metadata} from "next";
-import AddNews from "@/components/QuillAddNewsComponent/AddNews";
+import HomePageComponent from "@/components/HomePageComponent/HomePageComponent";
 
 
 export const metadata: Metadata = {
@@ -13,10 +9,8 @@ export const metadata: Metadata = {
 export default async function Home() {
 
   return (
-    <main>
-      <Search />
-      <SliderSlick />
-      {/*<AddNews />*/}
+    <main style={{marginTop: '83px'}} className='container'>
+        <HomePageComponent />
     </main>
   )
 }

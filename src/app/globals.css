@@ -100,6 +100,43 @@ a {
   text-decoration: none;
 }
 
+ul {
+  list-style: none;
+}
+
+section {
+  margin: 90px 0;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+input {
+  background: transparent;
+  border: none;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+button {
+  cursor: pointer;
+  font-size: 10px;
+  text-transform: uppercase;
+  padding: 10px;
+  border: 1px solid lightgrey;
+  background: transparent;
+}
+.container {
+  max-width: 1750px;
+  margin: auto;
+}
+.test {
+  margin-top: 80px;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

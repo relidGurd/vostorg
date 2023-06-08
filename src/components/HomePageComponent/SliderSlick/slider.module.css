@@ -1,0 +1,19 @@
+.container {
+    margin-bottom: 50px;
+}
+
+
+.contentSlideContainer {
+    top: 25%;
+    width: 5%;
+    margin-left: 60px;
+}
+
+.contentSlideContainer button {
+    margin: 20px 0;
+}
+
+.contentSlideContainer h1 {
+    font-size: 38px;
+    margin-bottom: 25px;
+}

@@ -1,0 +1,24 @@
+.featuredList {
+    display: flex;
+    justify-content: space-between;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card {
+    display: inline-block;
+    margin: 10px;
+    height: 250px;
+}
+
+.card:nth-child(1) {
+    margin-left: 0;
+}
+
+.card:nth-last-child(1) {
+    margin-right: 0;
+}
