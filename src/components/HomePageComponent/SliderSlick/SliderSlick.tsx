@@ -34,11 +34,11 @@ const SliderSlick:FC = () => {
             <Slider ref={sliderRef} {...settings}>
                 {slider.map((slide: any) =>
                     <div key={slide.id}>
-                        <div style={{height:"500px"}}>
-                            <div style={{width:"100%", height: "100%"}}>
-                                <img style={{width: "100%", height: "100%", objectFit:'cover'}} src={slide.img} alt=""/>
+                        <div className={styles.mainSlideContainer}>
+                            <div className={styles.mainSlideContainerImageBlock}>
+                                <img className={styles.mainSlideContainerImage} src={slide.img} alt=""/>
                             </div>
-                            <div style={{position: 'absolute'}} className={styles.contentSlideContainer}>
+                            <div className={styles.contentSlideContainer}>
                                 <h1 style={{color: `${slide.color}`}}>
                                     {slide.title}
                                 </h1>

@@ -142,3 +142,18 @@ button {
     color-scheme: dark;
   }
 }
+
+@media screen and (max-width: 1750px){
+  .container {
+    padding: 0 40px;
+    margin: auto;
+  }
+}
+
+
+
+@media screen and (max-width: 560px){
+    h1  {
+      font-size: 20px;
+    }
+}
