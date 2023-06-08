@@ -1,5 +1,4 @@
 import {getDataServices} from "@/services/getDataServices";
-import {Metadata, ResolvingMetadata} from "next";
 import SingleProduct from "@/components/SingleProduct/SindleProduct";
 
 //

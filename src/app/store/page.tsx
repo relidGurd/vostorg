@@ -1,8 +1,6 @@
 import {getDataServices} from "@/services/getDataServices";
 import Store from "@/components/Store/Store";
 import {Metadata} from "next";
-import Link from "next/link";
-import {CartIcon} from "@/icons/CartIcon";
 
 export const metadata: Metadata = {
     title: 'Магазин VOSTORG'
@@ -14,10 +12,7 @@ export const metadata: Metadata = {
 export default async function StorePage() {
     const data = await getDataServices.getAllFakeProducts()
     return (
-        <main>
-            <Link href='/order'>
-                <CartIcon />
-            </Link>
+        <main style={{marginTop: '83px'}} className='container'>
             <Store data={data}/>
         </main>
     )
