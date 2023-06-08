@@ -1,11 +1,27 @@
+.mainSlideContainer {
+    height: 500px;
+}
+
+.mainSlideContainerImageBlock {
+    width: 100%;
+    height: 100%;
+}
+
+.mainSlideContainerImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .container {
     margin-bottom: 50px;
 }
 
 
 .contentSlideContainer {
+    position: absolute;
     top: 25%;
-    width: 5%;
+    width: 8%;
     margin-left: 60px;
 }
 
@@ -16,4 +32,24 @@
 .contentSlideContainer h1 {
     font-size: 38px;
     margin-bottom: 25px;
+}
+
+
+@media screen and (max-width: 835px){
+    .mainSlideContainer {
+        height: 400px;
+    }
+
+    .contentSlideContainer {
+        top: 10%;
+        width: 10%;
+        margin-left: 60px;
+    }
+    .contentSlideContainer h1 {
+        font-size: 20px;
+    }
+
+    .contentSlideContainer p {
+        font-size: 15px;
+    }
 }
