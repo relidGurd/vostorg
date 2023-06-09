@@ -11,6 +11,8 @@ export const metadata: Metadata = {
 
 export default async function StorePage() {
     const data = await getDataServices.getAllFakeProducts()
+
+
     return (
         <main style={{marginTop: '83px'}} className='container'>
             <Store data={data}/>

@@ -1,26 +1,26 @@
 'use client'
 import SingleProduct from "@/components/SingleProduct/SindleProduct";
-import {getDataServices} from "@/services/getDataServices";
+import styles from './Store.module.css'
 import Link from "next/link";
 import {FC, useEffect} from "react";
 import axios from "axios";
+import ProductMini from "@/components/ProductMini/ProductMini";
 
 
 const Store: FC<{data: any}> = ({data}) => {
 
     const sessionId = localStorage.getItem('basket')
-
-    useEffect(() => {
-        //@ts-ignore
-        fetch('https://art-vostorg-store-test.up.railway.app/api/basket/', {
-            headers: {
-                'session-id': sessionId
-            }
-        })
-            .then(res => res.json())
-            .then(r => fetch(r.lines, {headers: {'session-id': sessionId}}).then(res => res.json()).then(rr => console.log(rr)))
-
-    }, [sessionId])
+    // useEffect(() => {
+    //     //@ts-ignore
+    //     fetch('https://art-vostorg-store-test.up.railway.app/api/basket/', {
+    //         headers: {
+    //             'session-id': sessionId
+    //         }
+    //     })
+    //         .then(res => res.json())
+    //         .then(r => fetch(r.lines, {headers: {'session-id': sessionId}}).then(res => res.json()).then(rr => console.log(rr)))
+    //
+    // }, [sessionId])
 
 
     // {
@@ -65,21 +65,28 @@ const Store: FC<{data: any}> = ({data}) => {
 
 
     return (
-        <div>
+        <>
             <div>
-                {
-                    data.map((product: any) =>
-                        <Link key={product.id} href={`/store/${product.id}`}>
-                            <SingleProduct product={product} />
-                        </Link>
-                    )
-                }
+                <span><Link href='/'>Главная</Link></span> >
+                <span><Link href='/store'> Магазин</Link></span>
             </div>
-
-            <button onClick={sendOrder}>
-                Отправить заказ
-            </button>
-        </div>
+            <div className={styles.parent}>
+                <div className={styles.div1}>
+                    Фильтры
+                </div>
+                <ul className={styles.div2}>
+                    {
+                        data.map((product: any) =>
+                            <li key={product.id}>
+                                <Link href={`/store/${product.id}`}>
+                                    <ProductMini product={product} />
+                                </Link>
+                            </li>
+                        )
+                    }
+                </ul>
+            </div>
+        </>
     )
 }
 

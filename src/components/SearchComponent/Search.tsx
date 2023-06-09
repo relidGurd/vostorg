@@ -6,7 +6,7 @@ const Search = () => {
     
     
     return (
-        <input className={styles.searchTest} type="text" placeholder="Искать по названию, категории, художнику"/>
+        <input type="text" placeholder="Искать по названию, категории, художнику"/>
     )
 }
 

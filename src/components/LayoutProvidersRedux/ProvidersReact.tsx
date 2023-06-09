@@ -21,6 +21,9 @@ const ProvidersReact: FC<{children: any}> = ({children}) => {
         }
     }, [])
 
+
+
+
     return (
         <Provider store={store}>
             <MenuComponent/>
