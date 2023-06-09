@@ -86,13 +86,11 @@ const Footer = () => {
                     <div className={`container`}>
                         <ul className={styles.thirdFooterListContainer}>
                             <li>
-                                <a href="/">
-                                    © 2023 ООО «‎Декарт»‎
-                                </a>
+                                © 2023 ООО «VOSTORG»
                             </li>
                             <li>
                                 <a href="/">
-                                   | Политика обработки персональных данных |
+                                   Политика обработки персональных данных
                                 </a>
                             </li>
                             <li>

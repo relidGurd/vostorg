@@ -1,10 +1,5 @@
 'use client'
 
-
-
-
-import {useAppDispatch, useAppSelector} from "@/redux/hooks";
-import {useEffect} from "react";
 import {useSelector} from "react-redux";
 
 const Cart = ()=> {

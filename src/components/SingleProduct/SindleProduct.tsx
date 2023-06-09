@@ -23,15 +23,17 @@ const SingleProduct: FC<{ product: any }> = ({product}) => {
     // }, [handlerAddProduct])
 
     return (
-        <div>
-            <h1>
-                {product.title}
-            </h1>
-            <span>
+        <>
+            <div className='container'>
+                <h1>
+                    {product.title}
+                </h1>
+                <span>
                 {product.url}
             </span>
-            <button onClick={handlerAddProduct}>Добавить в корзину</button>
-        </div>
+                <button onClick={handlerAddProduct}>Добавить в корзину</button>
+            </div>
+        </>
     )
 }
 

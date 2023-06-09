@@ -1,5 +1,7 @@
 import styles from './HomeEditorial.module.css'
 import Link from "next/link";
+import {defaultURL} from "@/constants/constans";
+import IsMobile from "@/hooks/IsMobile";
 
 
 const HomeEditorial = () => {
@@ -10,42 +12,42 @@ const HomeEditorial = () => {
             title: '6 Artists Who Were Using Artificial Intelligence Before ChatGPT',
             text: 'By Casey Lesser',
             date: 'Jun 7, 2023',
-            img: 'http://localhost:3000/gad.jpg'
+            img: `${defaultURL}/gad.jpg`
         },
         {
             id: 2,
             title: 'The Artsy Advisor Notebook: June 2023',
             text: 'By Casey Lesser',
             date: 'Jun 7, 2023',
-            img: 'http://localhost:3000/poc.jpg'
+            img: `${defaultURL}/poc.jpg`
         },
         {
             id: 3,
             title: 'Tania Marmolejo’s Wide-Eyed Portraits Are Capturing Collectors’ Attention',
             text: 'By Casey Lesser',
             date: 'Jun 7, 2023',
-            img: 'http://localhost:3000/zhivopis.png'
+            img: `${defaultURL}/zhivopis.png`
         },
         {
             id: 4,
             title: 'Atlantic World Art Fair 2023',
             text: 'By Casey Lesser',
             date: 'Jun 7, 2023',
-            img: 'http://localhost:3000/11.jpg'
+            img: `${defaultURL}/11.jpg`
         },
         {
             id: 5,
             title: 'Latin American Galleries Now 2023',
             text: 'By Casey Lesser',
             date: 'Jun 7, 2023',
-            img: 'http://localhost:3000/vtube.jpg'
+            img: `${defaultURL}/vtube.jpg`
         },
         {
             id: 6,
             title: 'FOCUS Art Fair New York 2023',
             text: 'By Casey Lesser',
             date: 'Jun 7, 2023',
-            img: 'http://localhost:3000/gulyanka.jpg'
+            img: `${defaultURL}/gulyanka.jpg`
         }
     ]
 
@@ -54,7 +56,7 @@ const HomeEditorial = () => {
             <h1 className={styles.editorialTitle}>События VOSTORG</h1>
             <div className={styles.parent}>
                 <div className={styles.div1}>
-                    <img className={styles.image} src="http://localhost:3000/classic.jpg" alt=""/>
+                    <img className={styles.image} src={`${defaultURL}/classic.jpg`} alt=""/>
                     <h1>
                         5 Standout Shows at Small Galleries to Discover This June
                     </h1>

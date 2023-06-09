@@ -1,5 +1,6 @@
 import {Metadata} from "next";
 import HomePageComponent from "@/components/HomePageComponent/HomePageComponent";
+import {getDataServices} from "@/services/getDataServices";
 
 
 export const metadata: Metadata = {

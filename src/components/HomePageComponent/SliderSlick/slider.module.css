@@ -1,5 +1,5 @@
 .mainSlideContainer {
-    height: 500px;
+    height: 550px;
 }
 
 .mainSlideContainerImageBlock {
@@ -51,5 +51,17 @@
 
     .contentSlideContainer p {
         font-size: 15px;
+    }
+}
+
+
+@media screen and (max-width: 444px){
+
+    .contentSlideContainer h1 {
+        font-size: 18px;
+    }
+
+    .contentSlideContainer p {
+        font-size: 12px;
     }
 }
