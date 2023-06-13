@@ -4,6 +4,7 @@ import {store} from "@/redux/store";
 import {FC, useEffect} from "react";
 import MenuComponent from "@/components/Menu/MenuComponent";
 import Footer from "@/components/Footer/Footer";
+import {AuthorizationToken} from "@/constants/constans";
 
 const ProvidersReact: FC<{children: any}> = ({children}) => {
 
@@ -11,7 +12,10 @@ const ProvidersReact: FC<{children: any}> = ({children}) => {
         if (!localStorage.getItem('basket')) {
             fetch('https://art-vostorg-store-test.up.railway.app/api/basket/', {
                 method: 'GET',
-                credentials: 'include'
+                credentials: 'include',
+                headers: {
+                    Authorization: AuthorizationToken
+                }
             })
                 .then(res => {
                     localStorage.setItem('basket', res.headers.get('session-id'))

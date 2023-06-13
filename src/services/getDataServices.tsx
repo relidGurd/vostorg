@@ -1,13 +1,12 @@
+import {AuthorizationToken} from "@/constants/constans";
 
 
 const requestOptions: RequestInit = {
     next: {revalidate: 60},
     headers: {
-       'Authorization': 'FbgFil71EC7GymRSEMpsE0T2HBUTRu3g'
+       'Authorization': AuthorizationToken
     }
 };
-
-export const basePublicUrl = 'http://localhost:3000/'
 
 export const getDataServices = {
 

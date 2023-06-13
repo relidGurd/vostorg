@@ -1,5 +1,5 @@
 import {getDataServices} from "@/services/getDataServices";
-import SingleProduct from "@/components/SingleProduct/SindleProduct";
+import ButtonComponent from "@/components/ButtonComponent/ButtonComponent";
 
 //
 // type Props = {
@@ -23,9 +23,21 @@ import SingleProduct from "@/components/SingleProduct/SindleProduct";
 
 export default async function SingleProductPage({ params }: any) {
     const data: any = await getDataServices.getSingleFakeProduct(params.id)
+
     return (
-        <main>
-            <SingleProduct product={data} />
+        <main style={{marginTop: '83px'}}>
+
+            <div className='container'>
+                <h1>
+                    {data.title}
+                </h1>
+                <span>
+                {data.url}
+            </span>
+                <ButtonComponent urlEndpoint={'add-product'}>Добавить в корзину</ButtonComponent>
+            </div>
+
+            {/*<ButtonComponent product={data} />*/}
         </main>
     )
 }
