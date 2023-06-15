@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-        domains: ['bizar.art'],
+        domains: ['https://art-vostorg-test.s3.yandexcloud.net'],
     },
 }
 

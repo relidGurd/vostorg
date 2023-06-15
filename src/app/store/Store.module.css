@@ -22,7 +22,19 @@
 
 
 @media screen and (max-width: 840px){
+    .parent {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 15px;
+    }
+
+
+
+    .div1 {
+        grid-area: 1 / 1 / 2 / 2;
+    }
     .div2 {
-        column-count: 1;
+        grid-area: 2 / 1 / 11 / 2;
     }
 }

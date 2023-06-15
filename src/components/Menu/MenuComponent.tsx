@@ -52,9 +52,11 @@ const MenuComponent: FC = () => {
                         <button>
                             {menu.buttons.choosePicture}
                         </button>
-                        <button>
-                            {menu.buttons.consultant}
-                        </button>
+                        <Link rel='prefetch' href='/service'>
+                            <button>
+                                {menu.buttons.consultant}
+                            </button>
+                        </Link>
                     </div>
 
                     <ul className={styles.socialsContainer}>

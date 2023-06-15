@@ -1,13 +1,13 @@
 "use client"
-import {FC, useRef} from 'react'
-import './slickStyles.css'
-import Slider from 'react-slick'
-import Image from "next/image";
-import styles from './slider.module.css'
+import {FC} from 'react'
+import styles from './HomeSlider.module.css'
 import {useSelector} from "react-redux";
+import SlickSlider from "@/components/SlickSlider/SlickSlider";
 
 
-const SliderSlick:FC = () => {
+
+
+const HomeSlider:FC = () => {
 
     const {slider} = useSelector((sl: any) => sl.slider)
     const settings = {
@@ -20,29 +20,22 @@ const SliderSlick:FC = () => {
         autoplaySpeed: 3000,
     };
 
-    const sliderRef = useRef(null)
 
-    const handleNext = () => {
-        if (sliderRef.current) {
-            //@ts-ignore
-            sliderRef.current.slickPrev()
-        }
-    }
 
     return (
         <div>
-            <Slider ref={sliderRef} {...settings}>
+            <SlickSlider settings={settings}>
                 {slider.map((slide: any) =>
                     <div key={slide.id}>
-                        <div className={styles.mainSlideContainer}>
-                            <div className={styles.mainSlideContainerImageBlock}>
+                        <div className={styles.parent}>
+                            <div className={styles.div1}>
                                 <img className={styles.mainSlideContainerImage} src={slide.img} alt=""/>
                             </div>
-                            <div className={styles.contentSlideContainer}>
-                                <h1 style={{color: `${slide.color}`}}>
+                            <div className={styles.div2}>
+                                <h1 className={styles.sliderTitle} style={{color: `${slide.color}`}}>
                                     {slide.title}
                                 </h1>
-                                <p style={{color: `${slide.color}`}}>
+                                <p className={styles.sliderDescription} style={{color: `${slide.color}`}}>
                                     {slide.description}
                                 </p>
                                 <button style={{color: `${slide.color}`}}>
@@ -52,9 +45,12 @@ const SliderSlick:FC = () => {
                         </div>
                     </div>
                 )}
-            </Slider>
+            </SlickSlider>
         </div>
     )
 }
 
-export default SliderSlick
+export default HomeSlider
+
+
+
