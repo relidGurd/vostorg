@@ -8,22 +8,22 @@ import {AuthorizationToken} from "@/constants/constans";
 
 const ProvidersReact: FC<{children: any}> = ({children}) => {
 
-    useEffect(() => {
-        if (!localStorage.getItem('basket')) {
-            fetch('https://art-vostorg-store-test.up.railway.app/api/basket/', {
-                method: 'GET',
-                credentials: 'include',
-                headers: {
-                    Authorization: AuthorizationToken
-                }
-            })
-                .then(res => {
-                    localStorage.setItem('basket', res.headers.get('session-id'))
-                    return res.json()
-                })
-                .then(data => localStorage.setItem('basket-url', data.url))
-        }
-    }, [])
+    // useEffect(() => {
+    //     if (!localStorage.getItem('basket')) {
+    //         fetch('https://art-vostorg-store-test.up.railway.app/api/basket/', {
+    //             method: 'GET',
+    //             credentials: 'include',
+    //             headers: {
+    //                 Authorization: AuthorizationToken
+    //             }
+    //         })
+    //             .then(res => {
+    //                 localStorage.setItem('basket', res.headers.get('session-id'))
+    //                 return res.json()
+    //             })
+    //             .then(data => localStorage.setItem('basket-url', data.url))
+    //     }
+    // }, [])
 
 
 

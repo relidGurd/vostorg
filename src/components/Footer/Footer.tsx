@@ -44,8 +44,8 @@ const Footer = () => {
                         <div className={styles.secondFooterContent}>
                             <h3 className={styles.secondFooterContentBlockTitle}>О нас</h3>
                             <ul className={styles.secondFooterContentList}>
-                                <li>О BIZAR</li>
-                                <li>Подключиться к BIZAR</li>
+                                <li>О VOSTORG</li>
+                                <li>Подключиться к VOSTORG</li>
                                 <li>Журнал</li>
                             </ul>
                         </div>

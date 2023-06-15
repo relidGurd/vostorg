@@ -53,13 +53,13 @@ const HomeEditorial = () => {
 
     return (
         <>
-            <h1 className={styles.editorialTitle}>События VOSTORG</h1>
+            <h1>События VOSTORG</h1>
             <div className={styles.parent}>
                 <div className={styles.div1}>
                     <img className={styles.image} src={`${defaultURL}/classic.jpg`} alt=""/>
-                    <h1>
+                    <h2>
                         5 Standout Shows at Small Galleries to Discover This June
-                    </h1>
+                    </h2>
                     <p>
                         By Casey Lesser
                     </p>
@@ -71,7 +71,7 @@ const HomeEditorial = () => {
                     <ul>
                         {testList.map(card => <li className={styles.listItemContainer}>
                             <img className={styles.image} src={card.img} alt=""/>
-                            <h1>{card.title}</h1>
+                            <h2>{card.title}</h2>
                             <p>{card.text}</p>
                             <span>{card.date}</span>
                         </li>)}

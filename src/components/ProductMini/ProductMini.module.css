@@ -1,6 +1,6 @@
 .container {
     display: inline-block;
-    margin: 15px;
+    margin-bottom: 15px;
 }
 
 .productContainer {
@@ -14,6 +14,15 @@
     object-fit: contain;
 }
 
+.productContainerForCarousel {
+    height: 300px;
+    width:auto;
+}
+
+.productImageForCarousel {
+    width: 100%;
+    height: 100%;
+}
 
 
 

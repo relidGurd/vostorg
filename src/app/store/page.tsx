@@ -14,7 +14,6 @@ export const metadata: Metadata = {
 export default async function StorePage() {
     const data = await getDataServices.getAllFakeProducts()
 
-
     return (
         <main style={{marginTop: '83px'}} className='container'>
             <div>
@@ -30,7 +29,7 @@ export default async function StorePage() {
                         data.map((product: any) =>
                             <li key={product.id}>
                                 <Link href={`/store/${product.id}`}>
-                                    <ProductMini product={product} />
+                                    <ProductMini product={product} isCarousel={false}/>
                                 </Link>
                             </li>
                         )

@@ -11,8 +11,12 @@ const requestOptions: RequestInit = {
 export const getDataServices = {
 
     async getAllFakeProducts() {
-        const res = await fetch('https://art-vostorg-store-test.up.railway.app/api/products/', requestOptions)
-        return res.json()
+        try {
+            const res = await fetch('https://art-vostorg-store-test.up.railway.app/api/products/', requestOptions)
+            return res.json()
+        } catch (err) {
+            console.log(err)
+        }
     },
 
     async getSingleFakeProduct(id: any) {
