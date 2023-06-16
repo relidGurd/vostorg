@@ -12,9 +12,8 @@ const ProvidersReact: FC<{children: any}> = ({children}) => {
     //     if (!localStorage.getItem('basket')) {
     //         fetch('https://art-vostorg-store-test.up.railway.app/api/basket/', {
     //             method: 'GET',
-    //             credentials: 'include',
     //             headers: {
-    //                 Authorization: AuthorizationToken
+    //                 'Authorization': "FbgFil71EC7GymRSEMpsE0T2HBUTRu3g"
     //             }
     //         })
     //             .then(res => {
