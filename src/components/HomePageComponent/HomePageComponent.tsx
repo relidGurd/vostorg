@@ -8,7 +8,7 @@ import {getDataServices} from "@/services/getDataServices";
 
 
 const HomePageComponent = async () => {
-    const data = await getDataServices.getAllFakeProducts()
+    const {data} = await getDataServices.getAllFakeProducts()
 
     return (
         <>

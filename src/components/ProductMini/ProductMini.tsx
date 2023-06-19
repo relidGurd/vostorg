@@ -10,20 +10,22 @@ interface IProductMini {
 
 
 const ProductMini: FC<IProductMini> = ({product, isCarousel}) => {
+
+
     return (
         <div className={styles.container}>
             <div className={!isCarousel ? styles.productContainer : styles.productContainerForCarousel}>
-                <img className={!isCarousel ? styles.productImageContainer : styles.productImageForCarousel} src={!product.images[0] ? `${defaultURL}/4.webp` : product.images[0].original} alt=""/>
+                <img className={!isCarousel ? styles.productImageContainer : styles.productImageForCarousel} src={`${defaultURL}/${product.attributes.mainImage.data.attributes.name}`} alt=""/>
             </div>
             <div>
                 <h2>
-                    {product.title}
+                    {product.attributes.name}
                 </h2>
                 <p>
-                    {product.author}
+                    {product.attributes.date}
                 </p>
                 <p>
-                    {`${product.price.incl_tax} ${product.price.currency}`}
+                    {product.attributes.price}
                 </p>
                 <ButtonComponent url={product.url} urlEndpoint={'add-product'}>Конпка</ButtonComponent>
             </div>
