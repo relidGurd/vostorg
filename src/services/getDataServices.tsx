@@ -1,10 +1,10 @@
-import {AuthorizationToken} from "@/constants/constans";
+import {AuthorizationToken, defaultApiUrl} from "@/constants/constans";
 
 
 const requestOptions: RequestInit = {
     next: {revalidate: 60},
     headers: {
-       'Authorization': AuthorizationToken
+        'Authorization': AuthorizationToken,
     }
 };
 
@@ -12,7 +12,16 @@ export const getDataServices = {
 
     async getAllFakeProducts() {
         try {
-            const res = await fetch('https://art-vostorg-store-test.up.railway.app/api/products/', requestOptions)
+            const res = await fetch(`${defaultApiUrl}/products?populate=mainImage`, requestOptions)
+            return res.json()
+        } catch (err) {
+            console.log(err)
+        }
+    },
+
+    async getPosts() {
+        try {
+            const res = await fetch(`${defaultApiUrl}/posts/1`, requestOptions)
             return res.json()
         } catch (err) {
             console.log(err)
@@ -20,13 +29,8 @@ export const getDataServices = {
     },
 
     async getSingleFakeProduct(id: any) {
-        const res = await fetch(`https://art-vostorg-store-test.up.railway.app/api/products/${id}/`, requestOptions)
+        const res = await fetch(`${defaultApiUrl}/products/${id}`, requestOptions)
         return res.json()
     },
-
-    async getTestProducts() {
-        const res = await fetch(`https://fakestoreapi.com/products?limit=10`)
-        return res.json()
-    }
 
 }

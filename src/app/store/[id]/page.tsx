@@ -21,19 +21,19 @@ import ButtonComponent from "@/components/ButtonComponent/ButtonComponent";
 //     };
 // }
 
-export default async function SingleProductPage({ params }: any) {
-    const data: any = await getDataServices.getSingleFakeProduct(params.id)
+export default async function SingleProductPage({params}: any) {
+    const {data}: any = await getDataServices.getSingleFakeProduct(params.id)
 
     return (
         <main style={{marginTop: '83px'}}>
 
             <div className='container'>
                 <h1>
-                    {data.title}
+                    {data.attributes.name}
                 </h1>
                 <span>
-                {data.url}
-            </span>
+                    {data.attributes.price}
+                </span>
                 <ButtonComponent urlEndpoint={'add-product'}>Добавить в корзину</ButtonComponent>
             </div>
 

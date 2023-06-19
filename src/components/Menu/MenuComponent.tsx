@@ -71,7 +71,9 @@ const MenuComponent: FC = () => {
                             </a>
                         </li>
                     </ul>
-                    <CartIcon/>
+                    <Link rel='prefetch' href='/order'>
+                        <CartIcon/>
+                    </Link>
                 </div>
             }
         </nav>

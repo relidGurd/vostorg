@@ -19,7 +19,7 @@ const initialState = {
             },
             {
                 name: 'Коллекции',
-                url: '/collection',
+                url: '/',
             },
             {
                 name: 'Галерея',
@@ -27,7 +27,7 @@ const initialState = {
             },
             {
                 name: 'Художники',
-                url: '/makers',
+                url: '/',
             },
         ],
         logo: 'logo image',

@@ -7,13 +7,18 @@ const Cart = ()=> {
 
 
     return (
-        <div>
-            {
-                products.map((prod: any) => <div key={prod.id}>
-                    {prod.title}
-                </div>)
-            }
-        </div>
+        <>
+            <section>
+                <h1>
+                    Корзина
+                </h1>
+                {
+                    products.map((prod: any) => <div key={prod.id}>
+                        {prod.title}
+                    </div>)
+                }
+            </section>
+        </>
     )
 }
 
