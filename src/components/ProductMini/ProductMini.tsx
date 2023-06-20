@@ -1,4 +1,4 @@
-import {defaultURL} from "@/constants/constans";
+import {defaultImageUrl} from "@/constants/constans";
 import {FC} from "react";
 import styles from './ProductMini.module.css'
 import ButtonComponent from "@/components/ButtonComponent/ButtonComponent";
@@ -10,16 +10,16 @@ interface IProductMini {
 
 
 const ProductMini: FC<IProductMini> = ({product, isCarousel}) => {
-
+    const image = product.attributes.image
 
     return (
         <div className={styles.container}>
             <div className={!isCarousel ? styles.productContainer : styles.productContainerForCarousel}>
-                <img className={!isCarousel ? styles.productImageContainer : styles.productImageForCarousel} src={`${defaultURL}/${product.attributes.mainImage.data.attributes.name}`} alt=""/>
+                <img className={!isCarousel ? styles.productImageContainer : styles.productImageForCarousel} src={`${defaultImageUrl}${image.data.attributes.url}`} alt=""/>
             </div>
             <div>
                 <h2>
-                    {product.attributes.name}
+                    {product.attributes.title}
                 </h2>
                 <p>
                     {product.attributes.date}
