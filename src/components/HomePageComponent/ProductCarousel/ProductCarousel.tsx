@@ -10,8 +10,6 @@ import isMobile from "@/hooks/IsMobile";
 const ProductCarousel = ({data, title}) => {
     const mobile = isMobile(494)
 
-
-
     const settings = {
         className: `slider variable-width`,
         dots: false,

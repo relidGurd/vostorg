@@ -3,16 +3,14 @@ import {AuthorizationToken, defaultApiUrl} from "@/constants/constans";
 
 const requestOptions: RequestInit = {
     next: {revalidate: 60},
-    headers: {
-        'Authorization': AuthorizationToken,
-    }
+    headers: {}
 };
 
 export const getDataServices = {
 
     async getAllFakeProducts() {
         try {
-            const res = await fetch(`${defaultApiUrl}/products?populate=mainImage`, requestOptions)
+            const res = await fetch(`${defaultApiUrl}/products?populate=image`, requestOptions)
             return res.json()
         } catch (err) {
             console.log(err)
@@ -32,5 +30,12 @@ export const getDataServices = {
         const res = await fetch(`${defaultApiUrl}/products/${id}`, requestOptions)
         return res.json()
     },
+
+
+    async postOrder(product) {
+       await fetch(`${defaultApiUrl}/orders`)
+
+
+    }
 
 }
