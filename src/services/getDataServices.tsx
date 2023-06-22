@@ -19,7 +19,17 @@ export const getDataServices = {
 
     async getPosts() {
         try {
-            const res = await fetch(`${defaultApiUrl}/posts/1`, requestOptions)
+            const res = await fetch(`${defaultApiUrl}/posts?populate=preview`, requestOptions)
+            return res.json()
+        } catch (err) {
+            console.log(err)
+        }
+    },
+
+
+    async getSinglePost(id) {
+        try {
+            const res = await fetch(`${defaultApiUrl}/posts/${id}`, requestOptions)
             return res.json()
         } catch (err) {
             console.log(err)

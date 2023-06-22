@@ -1,11 +1,12 @@
 import styles from './HomeEditorial.module.css'
+import {defaultImageUrl, defaultURL} from "@/constants/constans";
+import {getDataServices} from "@/services/getDataServices";
 import Link from "next/link";
-import {defaultURL} from "@/constants/constans";
-import IsMobile from "@/hooks/IsMobile";
 
 
-const HomeEditorial = () => {
 
+const HomeEditorial = async () => {
+    const {data} = await getDataServices.getPosts()
     const testList = [
         {
             id: 1,
@@ -51,6 +52,7 @@ const HomeEditorial = () => {
         }
     ]
 
+
     return (
         <>
             <h1>События VOSTORG</h1>
@@ -58,7 +60,7 @@ const HomeEditorial = () => {
                 <div className={styles.div1}>
                     <img className={styles.image} src={`${defaultURL}/classic.jpg`} alt=""/>
                     <h2>
-                        5 Standout Shows at Small Galleries to Discover This June
+                        {data[0].attributes.title}
                     </h2>
                     <p>
                         By Casey Lesser
@@ -69,12 +71,20 @@ const HomeEditorial = () => {
                 </div>
                 <div className={styles.div2}>
                     <ul>
-                        {testList.map(card => <li className={styles.listItemContainer}>
-                            <img className={styles.image} src={card.img} alt=""/>
-                            <h2>{card.title}</h2>
-                            <p>{card.text}</p>
-                            <span>{card.date}</span>
-                        </li>)}
+                        {data.map(card => {
+                            const imageUrl = card.attributes.preview.data.attributes.url
+
+                            return (
+                                <li className={styles.listItemContainer}>
+                                    <Link href={`/news/${card.id}`}>
+                                        <img className={styles.image} src={`${defaultImageUrl}${imageUrl}`} alt=""/>
+                                        <h2>{card.attributes.title}</h2>
+                                        <p>{card.attributes.description}</p>
+                                        <span>{card.attributes.publishedAt}</span>
+                                    </Link>
+                                </li>
+                            )
+                        })}
                     </ul>
                 </div>
             </div>

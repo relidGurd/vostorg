@@ -140,6 +140,11 @@ button {
   max-width: 1750px;
   margin: auto;
 }
+
+.blogContainer {
+  max-width: 740px;
+  margin: auto;
+}
 .test {
   margin-top: 80px;
 }
