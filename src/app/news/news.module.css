@@ -1,4 +1,12 @@
-.container img {
-    width: 50px;
-    height: 60px;
+.container {
+    max-width: 1200px;
+    margin: 110px auto;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.postsListContainer {
+    display: flex;
+    flex-wrap: wrap;
 }
