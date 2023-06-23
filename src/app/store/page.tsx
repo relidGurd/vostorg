@@ -3,6 +3,7 @@ import {Metadata} from "next";
 import Link from "next/link";
 import styles from "./Store.module.css";
 import ProductMini from "@/components/ProductMini/ProductMini";
+import Pagination from "@/components/Pgination/Pagination";
 
 export const metadata: Metadata = {
     title: 'Магазин VOSTORG'
@@ -36,6 +37,7 @@ export default async function StorePage() {
                     }
                 </ul>
             </div>
+
         </main>
     )
 }

@@ -6,10 +6,6 @@ const initialState = {
     menu: {
         link: [
             {
-                name: 'Домой',
-                url: '/',
-            },
-            {
                 name: 'Магазин',
                 url: '/store',
             },
@@ -23,7 +19,7 @@ const initialState = {
             },
             {
                 name: 'Галерея',
-                url: '/gallery',
+                url: '/',
             },
             {
                 name: 'Художники',

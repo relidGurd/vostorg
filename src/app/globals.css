@@ -141,10 +141,17 @@ button {
   margin: auto;
 }
 
-.blogContainer {
+.postContainer {
   max-width: 740px;
   margin: auto;
 }
+
+
+.blogContainer {
+  max-width: 1110px;
+  margin: auto;
+}
+
 .test {
   margin-top: 80px;
 }

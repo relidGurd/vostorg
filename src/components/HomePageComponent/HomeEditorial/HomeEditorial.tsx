@@ -6,52 +6,7 @@ import Link from "next/link";
 
 
 const HomeEditorial = async () => {
-    const {data} = await getDataServices.getPosts()
-    const testList = [
-        {
-            id: 1,
-            title: '6 Artists Who Were Using Artificial Intelligence Before ChatGPT',
-            text: 'By Casey Lesser',
-            date: 'Jun 7, 2023',
-            img: `${defaultURL}/gad.jpg`
-        },
-        {
-            id: 2,
-            title: 'The Artsy Advisor Notebook: June 2023',
-            text: 'By Casey Lesser',
-            date: 'Jun 7, 2023',
-            img: `${defaultURL}/poc.jpg`
-        },
-        {
-            id: 3,
-            title: 'Tania Marmolejo’s Wide-Eyed Portraits Are Capturing Collectors’ Attention',
-            text: 'By Casey Lesser',
-            date: 'Jun 7, 2023',
-            img: `${defaultURL}/zhivopis.png`
-        },
-        {
-            id: 4,
-            title: 'Atlantic World Art Fair 2023',
-            text: 'By Casey Lesser',
-            date: 'Jun 7, 2023',
-            img: `${defaultURL}/11.jpg`
-        },
-        {
-            id: 5,
-            title: 'Latin American Galleries Now 2023',
-            text: 'By Casey Lesser',
-            date: 'Jun 7, 2023',
-            img: `${defaultURL}/vtube.jpg`
-        },
-        {
-            id: 6,
-            title: 'FOCUS Art Fair New York 2023',
-            text: 'By Casey Lesser',
-            date: 'Jun 7, 2023',
-            img: `${defaultURL}/gulyanka.jpg`
-        }
-    ]
-
+    const {data} = await getDataServices.getPosts('&?pagination[page]=1&pagination[pageSize]=6')
 
     return (
         <>

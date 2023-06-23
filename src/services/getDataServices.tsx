@@ -17,9 +17,10 @@ export const getDataServices = {
         }
     },
 
-    async getPosts() {
+    async getPosts(filterString?: string) {
+        const test = !filterString ? "" : filterString
         try {
-            const res = await fetch(`${defaultApiUrl}/posts?populate=preview`, requestOptions)
+            const res = await fetch(`${defaultApiUrl}/posts?populate=preview${test}`, requestOptions)
             return res.json()
         } catch (err) {
             console.log(err)
