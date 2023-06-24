@@ -1,3 +1,4 @@
+"use client"
 import {defaultImageUrl} from "@/constants/constans";
 import {FC} from "react";
 import styles from './ProductMini.module.css'
@@ -11,6 +12,7 @@ interface IProductMini {
 
 const ProductMini: FC<IProductMini> = ({product, isCarousel}) => {
     const image = product.attributes.image
+
 
     return (
         <div className={styles.container}>
