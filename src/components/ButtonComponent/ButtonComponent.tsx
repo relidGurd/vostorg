@@ -5,7 +5,7 @@ import {AuthorizationToken} from "@/constants/constans";
 
 
 interface IButton {
-    url: string;
+    url?: string;
     children: string;
     urlEndpoint: string;
 }

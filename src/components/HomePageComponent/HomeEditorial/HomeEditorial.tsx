@@ -13,16 +13,18 @@ const HomeEditorial = async () => {
             <h1>События VOSTORG</h1>
             <div className={styles.parent}>
                 <div className={styles.div1}>
-                    <img className={styles.image} src={`${defaultURL}/classic.jpg`} alt=""/>
-                    <h2>
-                        {data[0].attributes.title}
-                    </h2>
-                    <p>
-                        By Casey Lesser
-                    </p>
-                    <span>
+                    <Link href={`/news/${data[0].id}`}>
+                        <img className={styles.image} src={`${defaultURL}/classic.jpg`} alt=""/>
+                        <h2>
+                            {data[0].attributes.title}
+                        </h2>
+                        <p>
+                            By Casey Lesser
+                        </p>
+                        <span>
                         Jun 7, 2023
                     </span>
+                    </Link>
                 </div>
                 <div className={styles.div2}>
                     <ul>
