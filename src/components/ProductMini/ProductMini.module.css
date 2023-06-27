@@ -25,6 +25,20 @@
 }
 
 
+@media screen and (max-width: 360px) {
+    .productContainerForCarousel {
+        height: 150px;
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 635px) {
+    .productContainerForCarousel {
+        height: 200px;
+    }
+}
+
+
 
 
 

@@ -13,16 +13,16 @@ export default async function StorePage() {
 
 
     return (
-        <main style={{marginTop: '83px'}} className='container'>
-            <section>
-                <div>
-                    <img src={`${defaultURL}/servicesslide.png`} alt=""/>
+        <main style={{marginTop: '100px'}} className='container'>
+            <section className={styles.parent}>
+                <div className={styles.div1}>
+                    <img className={styles.imageContainer} src={`${defaultURL}/slide2.jpg`} alt=""/>
                 </div>
-                <div>
-                    <h1>
+                <div className={styles.div2}>
+                    <h1 className={styles.title}>
                         Подбор картин в интерьер и роспись поверхностей
                     </h1>
-                    <ul>
+                    <ul className={styles.butList}>
                         <li>
                             Офромить дом
                         </li>
@@ -36,7 +36,7 @@ export default async function StorePage() {
                             Оформить магазин
                         </li>
                     </ul>
-                    <p>
+                    <p className={styles.desc}>
                         Бесплатно подберем картины и объекты в существующий или запланированный интерьер, украсим пространство художественной росписью, оформим помещение под ключ
                     </p>
                     <div>
@@ -48,6 +48,9 @@ export default async function StorePage() {
                         </button>
                     </div>
                 </div>
+            </section>
+            <section>
+
             </section>
         </main>
     )

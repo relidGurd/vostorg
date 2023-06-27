@@ -16,7 +16,7 @@ export const PostComponent = ({title, text, img, tags, id}) => {
                 </div>
                 {
                     tags && (
-                        <span>{tags}</span>
+                        <h2 style={{fontSize: "20px", margin: "10px 0"}}>{tags}</h2>
                     )
                 }
                 <h1>
