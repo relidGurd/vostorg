@@ -1,6 +1,6 @@
 import {getDataServices} from "@/services/getDataServices";
-import ButtonComponent from "@/components/ButtonComponent/ButtonComponent";
 import {Metadata, ResolvingMetadata} from "next";
+import {DetailProduct} from "@/components/DetailProduct/DetailProduct";
 
 //
 // type Props = {
@@ -27,19 +27,8 @@ export default async function SingleProductPage({params}: any) {
     const {data}: any = await getDataServices.getSingleFakeProduct(params.id)
 
     return (
-        <main style={{marginTop: '83px'}}>
-
-            <div className='container'>
-                <h1>
-                    {data.attributes.title}
-                </h1>
-                <span>
-                    {data.attributes.price} р.
-                </span>
-                <ButtonComponent urlEndpoint={'add-product'}>Добавить в корзину</ButtonComponent>
-            </div>
-
-            {/*<ButtonComponent product={data} />*/}
+        <main className='container' style={{marginTop: '83px'}}>
+            <DetailProduct prod={data} />
         </main>
     )
 }
