@@ -38,7 +38,7 @@ export const getDataServices = {
     },
 
     async getSingleFakeProduct(id: any) {
-        const res = await fetch(`${defaultApiUrl}/products/${id}`, requestOptions)
+        const res = await fetch(`${defaultApiUrl}/products/${id}?populate=product_categories&populate=image`, requestOptions)
         return res.json()
     },
 
